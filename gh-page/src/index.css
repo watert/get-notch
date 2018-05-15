@@ -6,19 +6,15 @@ body {
   padding: 0;
   height: 100%;
   background: #EEE;
-  padding-bottom: constant(safe-area-inset-bottom);
-  padding-bottom: env(safe-area-inset-bottom);
   font-family: sans-serif;
 }
+.App-body { text-align: left; }
 pre { text-align: left; margin: 16px; }
 .expand {
   height: 800px;
 }
 .toolbar-wrap {
   background: #e1f5fe;
-  /* padding-bottom: 32px; */
-  padding-bottom: constant(safe-area-inset-bottom);
-  padding-bottom: env(safe-area-inset-bottom);
 }
 .toolbar {
   display: fixed; bottom: 0;

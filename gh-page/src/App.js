@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import getNotch, { getDomPaddings, getDom, supportsEnvNotch, supportsConstantNotch } from './lib/get-notch';
+import './lib/helpers.css';
 
 console.log('getNotch', getNotch())
 
@@ -22,7 +23,7 @@ class App extends Component {
     const { count = 0 } = this.state;
     this.setState({
       count: count + 1,
-      paddings: getDomPaddings(this.dom),
+      // paddings: getDomPaddings(this.dom),
       // paddingBottom: parseInt(window.getComputedStyle(this.dom).paddingBottom),
       notch: getNotch(),
       supportsEnvNotch: supportsEnvNotch(),
@@ -39,9 +40,11 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <div className="expand"></div>
-        <pre>State: {JSON.stringify(this.state, null, 2)}</pre>
-        <div className="toolbar-wrap">
+        <div className="padding-safe-horizontal App-body">
+          <div className="expand"></div>
+          <pre>State: {JSON.stringify(this.state, null, 2)}</pre>
+        </div>
+        <div className="toolbar-wrap padding-safe-bottom">
           <div className="toolbar">TOOLBAR</div>
         </div>
       </div>
