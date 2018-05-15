@@ -1,0 +1,23 @@
+{
+  "name": "get-notch",
+  "version": "1.0.0",
+  "description": "get / listening phone notch enabled / size",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy-page": "gh-pages -d gh-page/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watert/get-notch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/watert/get-notch/issues"
+  },
+  "homepage": "https://github.com/watert/get-notch#readme",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
+}
