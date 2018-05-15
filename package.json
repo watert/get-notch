@@ -1,5 +1,19 @@
-# dependencies
-/node_modules
-
-# testing
-/coverage
+{
+  "name": "get-notch",
+  "version": "0.1.0",
+  "description": "get / listening phone notch enabled / size",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watert/get-notch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/watert/get-notch/issues"
+  },
+  "homepage": "https://github.com/watert/get-notch#readme"
+}

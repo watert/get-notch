@@ -8,16 +8,17 @@ body {
   background: #EEE;
   font-family: sans-serif;
 }
+.App { padding-bottom: 64px; }
 .App-body { text-align: left; }
 pre { text-align: left; margin: 16px; }
 .expand {
   height: 800px;
 }
 .toolbar-wrap {
+  position: fixed; bottom: 0; width: 100%;
   background: #e1f5fe;
 }
 .toolbar {
-  display: fixed; bottom: 0;
   background: rgba(0,0,0,.1);
   height: 48px; font-size: 16px; line-height: 48px; font-weight: 500;
   box-sizing: content-box;

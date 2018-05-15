@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import getNotch, { getDomPaddings, getDom, supportsEnvNotch, supportsConstantNotch } from './lib/get-notch';
+import getNotch, { listenNotchChange } from './lib/get-notch';
 import './lib/helpers.css';
 
 console.log('getNotch', getNotch())
@@ -11,26 +11,19 @@ class App extends Component {
   componentDidMount() {
     // const notch = getNotch().toString();
     // this.setState({ notch });
-    const dom = this.dom = getDom();
-    this.calculate();
-    const interval = setInterval(() => this.calculate(), 1000);
-    this.clearInterval = () => clearInterval(interval);
-  }
-  componentWillUnmount() {
-    this.clearInterval();
-  }
-  calculate() {
-    const { count = 0 } = this.state;
-    this.setState({
-      count: count + 1,
-      // paddings: getDomPaddings(this.dom),
-      // paddingBottom: parseInt(window.getComputedStyle(this.dom).paddingBottom),
-      notch: getNotch(),
-      supportsEnvNotch: supportsEnvNotch(),
-      supportsConstantNotch: supportsConstantNotch(),
+    // const dom = this.dom = getDom();
+    
+    this.stopListen = listenNotchChange((notch) => {
+      const { count = 0 } = this.state;
+      this.setState({ notch, count: count + 1 });
     });
   }
+  componentWillUnmount() {
+    this.stopListen();
+    // this.clearInterval();
+  }
   render() {
+    const { notch = {} } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -38,14 +31,13 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          See notch value in bottom toolbar.
         </p>
-        <div className="padding-safe-horizontal App-body">
+        <div className="App-body padding-safe-horizontal padding-safe-bottom">
           <div className="expand"></div>
-          <pre>State: {JSON.stringify(this.state, null, 2)}</pre>
         </div>
         <div className="toolbar-wrap padding-safe-bottom">
-          <div className="toolbar">TOOLBAR</div>
+          <div className="toolbar">{JSON.stringify(notch)}</div>
         </div>
       </div>
     );
