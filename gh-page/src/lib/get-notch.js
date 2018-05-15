@@ -133,7 +133,7 @@ export function getDom() {
 }
 export function getDomPaddings(dom) {
   return mapObject(notchKeys, (propName) => {
-    return parseInt(window.getComputedStyle(dom)[propName]);
+    return parseInt(window.getComputedStyle(dom)[propName], 10);
   });
   // paddingBottom: parseInt(window.getComputedStyle(this.dom).paddingBottom),  
 }

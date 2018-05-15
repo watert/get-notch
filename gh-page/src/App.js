@@ -30,11 +30,11 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          See notch value in bottom toolbar.
-        </p>
-        <div className="App-body padding-safe-horizontal padding-safe-bottom">
-          <div className="expand"></div>
+        <div className="padding-safe-horizontal padding-safe-bottom">
+          <div className="App-body">
+            <p className="App-intro">See notch value in bottom toolbar.</p>
+            <div className="expand"></div>
+          </div>
         </div>
         <div className="toolbar-wrap padding-safe-bottom">
           <div className="toolbar">{JSON.stringify(notch)}</div>

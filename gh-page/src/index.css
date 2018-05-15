@@ -5,21 +5,23 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background: #EEE;
   font-family: sans-serif;
+  background: #ffecb3;
 }
-.App { padding-bottom: 64px; }
-.App-body { text-align: left; }
+.App { padding-bottom: 48px; }
+.App-body { padding: 8px; background: #fff8e1; }
+
 pre { text-align: left; margin: 16px; }
 .expand {
   height: 800px;
 }
 .toolbar-wrap {
   position: fixed; bottom: 0; width: 100%;
-  background: #e1f5fe;
+  background: #b3e5fc;
+  /* background: #e1f5fe; */
 }
 .toolbar {
-  background: rgba(0,0,0,.1);
+  background: #e1f5fe;
   height: 48px; font-size: 16px; line-height: 48px; font-weight: 500;
   box-sizing: content-box;
 }
