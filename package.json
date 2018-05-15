@@ -1,7 +1,7 @@
 {
   "name": "get-notch",
   "version": "0.1.0",
-  "description": "get / listening phone notch enabled / size",
+  "description": "get / listening phone notch sizes",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
